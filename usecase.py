@@ -16,6 +16,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 nltk.download('stopwords')
 nltk.download('punkt')
+nltk.download('wordnet')
 def clean(text): 
   
 
