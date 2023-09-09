@@ -1,6 +1,4 @@
 pandas
 nltk
 streamlit
-pickle
-joblib
-sci-kit learn
+scikit-learn
