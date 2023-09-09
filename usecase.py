@@ -161,11 +161,11 @@ def lemmatize_text(text):
     return lemmatized_text
 
 
-with open(r'D:\Cignite\lg_model.pkl', 'rb') as model_file, \
-    open(r'D:\Cignite\tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
+with open('lg_model.pkl', 'rb') as model_file, \
+    open('tfidf_vectorizer.pkl', 'rb') as vectorizer_file:
     lg_model = pickle.load(model_file)
     vectorizer = pickle.load(vectorizer_file)
-invalid_defects = pd.read_excel(r"D:\Cignite\cancelled_defects.xlsx")
+invalid_defects = pd.read_excel("cancelled_defects.xlsx")
 st.title("Defect Management")
 text_input = st.text_input("Enter a defect:")
 
@@ -180,7 +180,7 @@ if st.button("Classify Defect"):
 
     if predicted_sentiment == 0:
         st.write("The defect is classified as 'Invalid' ")
-        tfidf_matrix_file = r"D:\Cignite\tfidf_matrix_invalid_defects.pkl"
+        tfidf_matrix_file = "tfidf_matrix_invalid_defects.pkl"
         try:
             tfidf_matrix = joblib.load(tfidf_matrix_file)
 
