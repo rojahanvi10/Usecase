@@ -2,3 +2,4 @@ pandas
 nltk
 streamlit
 scikit-learn
+openpyxl
